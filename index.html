@@ -3,159 +3,107 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Saturday in North Goa — one day, nine stops</title>
+<title>Saturday in North Goa — beaches, burgers, midnight</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0B231F;
-  --ink-2:#10302A;
-  --ink-3:#164038;
-  --chalk:#E9E5D6;
-  --muted:#8DA79B;
-  --laterite:#C1502E;
-  --azul:#7FA6D4;
-  --mango:#E5A83C;
+  --ink:#0B231F; --ink-2:#10302A; --ink-3:#164038;
+  --chalk:#E9E5D6; --muted:#8DA79B;
+  --laterite:#C1502E; --azul:#7FA6D4; --mango:#E5A83C;
   --rule:rgba(233,229,214,.14);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--ink);
-  color:var(--chalk);
+body{margin:0;background:var(--ink);color:var(--chalk);
   font-family:"Archivo",system-ui,-apple-system,sans-serif;
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 a{color:var(--azul)}
 
-/* ---------- hero ---------- */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-.hero .wrap{position:relative;z-index:2;padding-top:72px;padding-bottom:52px}
+.hero .wrap{position:relative;z-index:2;padding-top:68px;padding-bottom:50px}
 .rain{position:absolute;inset:0;z-index:1;opacity:0;pointer-events:none;
-  background-image:repeating-linear-gradient(107deg,
-    rgba(233,229,214,.16) 0 1px, transparent 1px 5px),
-    repeating-linear-gradient(107deg,
-    rgba(233,229,214,.07) 0 1px, transparent 1px 13px);
-  background-size:auto 140px, auto 220px;
-  animation:fadeRain 1.6s ease-out .2s forwards, fall 1.1s linear infinite;
-}
-@keyframes fall{to{background-position:-46px 140px, -72px 220px}}
+  background-image:repeating-linear-gradient(107deg,rgba(233,229,214,.16) 0 1px,transparent 1px 5px),
+    repeating-linear-gradient(107deg,rgba(233,229,214,.07) 0 1px,transparent 1px 13px);
+  background-size:auto 140px,auto 220px;
+  animation:fadeRain 1.6s ease-out .2s forwards, fall 1.1s linear infinite}
+@keyframes fall{to{background-position:-46px 140px,-72px 220px}}
 @keyframes fadeRain{to{opacity:1}}
-.hero h1{
-  font-family:"Instrument Serif",Georgia,serif;
-  font-weight:400;
-  font-size:clamp(46px,12vw,84px);
-  line-height:.94;
-  letter-spacing:-.015em;
-  margin:0 0 20px;
-}
+.hero h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(44px,11.5vw,80px);line-height:.94;letter-spacing:-.015em;margin:0 0 20px}
 .hero h1 em{font-style:italic}
 .stand{max-width:44ch;color:var(--muted);margin:0 0 30px;font-size:17px}
-.facts{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule)}
-.fact{flex:1 1 120px;padding:14px 16px 14px 0;border-right:1px solid var(--rule)}
+.facts{display:flex;flex-wrap:wrap;border-top:1px solid var(--rule)}
+.fact{flex:1 1 110px;padding:14px 16px 14px 0;border-right:1px solid var(--rule)}
 .fact:last-child{border-right:0}
-.fact b{display:block;font-family:"Instrument Serif",serif;font-size:26px;font-weight:400;line-height:1.1}
-.fact span{font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.fact b{display:block;font-family:"Instrument Serif",serif;font-size:25px;font-weight:400;line-height:1.1}
+.fact span{font-size:12.5px;color:var(--muted)}
 
-/* ---------- advisory ---------- */
 .advisory{background:var(--ink-2);border-bottom:1px solid var(--rule)}
 .advisory .wrap{padding:22px 20px}
-.advisory h2{
-  font-family:"Archivo",sans-serif;font-size:14px;font-weight:600;margin:0 0 8px;
-  color:var(--mango);
-}
-.advisory p{margin:0 0 8px;font-size:15px;max-width:66ch;color:var(--chalk)}
+.advisory h2{font-size:14px;font-weight:600;margin:0 0 8px;color:var(--mango)}
+.advisory p{margin:0 0 8px;font-size:15px;max-width:66ch}
 .advisory p:last-child{margin-bottom:0}
 .advisory .why{color:var(--muted);font-size:14px}
 
-/* ---------- timeline ---------- */
 main .wrap{padding-top:44px;padding-bottom:20px}
-.sectionhead{
-  font-family:"Instrument Serif",serif;font-weight:400;font-size:32px;
-  margin:0 0 6px;
-}
-.sectionsub{color:var(--muted);font-size:15px;margin:0 0 34px;max-width:56ch}
+.sectionhead{font-family:"Instrument Serif",serif;font-weight:400;font-size:32px;margin:0 0 6px}
+.sectionsub{color:var(--muted);font-size:15px;margin:0 0 34px;max-width:58ch}
 
-.stop{
-  position:relative;
-  padding:0 0 0 78px;
-  margin-bottom:0;
-}
-.stop::before{ /* the road */
-  content:"";position:absolute;left:23px;top:9px;bottom:0;width:1px;background:var(--rule);
-}
+.stop{position:relative;padding:0 0 0 78px}
+.stop::before{content:"";position:absolute;left:23px;top:9px;bottom:0;width:1px;background:var(--rule)}
 .stop:last-of-type::before{display:none}
-.dot{
-  position:absolute;left:17px;top:6px;width:13px;height:13px;border-radius:50%;
-  background:var(--ink);border:1px solid var(--muted);
-}
+.dot{position:absolute;left:17px;top:6px;width:13px;height:13px;border-radius:50%;
+  background:var(--ink);border:1px solid var(--muted)}
+.stop.beach .dot{border-color:var(--azul)}
 .stop.now .dot{background:var(--mango);border-color:var(--mango);box-shadow:0 0 0 5px rgba(229,168,60,.16)}
 .stop.done .dot{background:var(--muted);border-color:var(--muted)}
-
-.time{
-  position:absolute;left:0;top:34px;width:52px;
-  font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted);
-  letter-spacing:.01em;
-}
+.time{position:absolute;left:0;top:34px;width:52px;font-size:13px;
+  font-variant-numeric:tabular-nums;color:var(--muted)}
 .card{padding:0 0 34px}
 .kind{font-size:12.5px;color:var(--laterite);font-weight:600;margin:0 0 2px}
-.stop h3{
-  font-family:"Instrument Serif",serif;font-weight:400;font-size:29px;line-height:1.12;
-  margin:0 0 3px;letter-spacing:-.01em;
-}
+.stop.beach .kind{color:var(--azul)}
+.stop h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:29px;line-height:1.12;
+  margin:0 0 3px;letter-spacing:-.01em}
 .stop h3 .hh{font-size:14px;font-family:"Archivo",sans-serif;color:var(--muted);display:block;margin-top:5px}
 .stop p{margin:11px 0 0;font-size:15.5px;max-width:60ch}
 .stop .order{color:var(--mango)}
-.stop .warn{color:var(--chalk);border-left:2px solid var(--laterite);padding-left:12px}
+.stop .warn{border-left:2px solid var(--laterite);padding-left:12px}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.pill{
-  font-size:13px;text-decoration:none;color:var(--chalk);
-  border:1px solid var(--rule);border-radius:999px;padding:6px 13px;
-  background:var(--ink-2);transition:border-color .15s,background .15s;
-}
+.pill{font-size:13px;text-decoration:none;color:var(--chalk);border:1px solid var(--rule);
+  border-radius:999px;padding:6px 13px;background:var(--ink-2);
+  transition:border-color .15s,background .15s}
 a.pill:hover,a.pill:focus{border-color:var(--azul);background:var(--ink-3)}
 .pill.plain{color:var(--muted);background:transparent}
 button.pill{font-family:inherit;cursor:pointer}
 button.pill[aria-pressed="true"]{background:var(--ink-3);border-color:var(--muted);color:var(--muted)}
 .stop.done h3,.stop.done p,.stop.done .kind{opacity:.4}
-
-.leg{
-  position:relative;padding:0 0 30px 78px;margin-top:-16px;
-  font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;
-}
+.leg{position:relative;padding:0 0 30px 78px;margin-top:-16px;font-size:13.5px;
+  color:var(--muted);font-variant-numeric:tabular-nums}
 .leg::before{content:"";position:absolute;left:23px;top:0;bottom:0;width:1px;background:var(--rule)}
 
-/* ---------- blocks ---------- */
 .block{border-top:1px solid var(--rule);padding:34px 0}
 .block h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:30px;margin:0 0 16px}
 .block ul{margin:0;padding-left:18px}
 .block li{margin-bottom:11px;max-width:62ch;font-size:15.5px}
-.block li b{font-weight:600}
 .split{display:grid;grid-template-columns:1fr;gap:26px}
-.money{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums;max-width:420px}
+.money{width:100%;border-collapse:collapse;font-size:15px;
+  font-variant-numeric:tabular-nums;max-width:420px}
 .money td{padding:8px 0;border-bottom:1px solid var(--rule)}
 .money td:last-child{text-align:right;color:var(--muted)}
 .money tr:last-child td{border-bottom:0;font-weight:600;color:var(--chalk)}
 footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);font-size:13.5px}
 
-@media (min-width:640px){
-  .split{grid-template-columns:1fr 1fr;gap:40px}
-}
+@media (min-width:640px){.split{grid-template-columns:1fr 1fr;gap:40px}}
 @media (max-width:480px){
   .stop,.leg{padding-left:62px}
   .stop::before,.leg::before{left:17px}
   .dot{left:11px}
   .time{width:46px;font-size:12.5px}
 }
-@media (prefers-reduced-motion:reduce){
-  .rain{animation:none;opacity:1}
-  *{transition:none!important}
-}
+@media (prefers-reduced-motion:reduce){.rain{animation:none;opacity:1}*{transition:none!important}}
 :focus-visible{outline:2px solid var(--mango);outline-offset:3px;border-radius:4px}
 </style>
 </head>
@@ -164,125 +112,119 @@ footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);f
 <header class="hero">
   <div class="rain" aria-hidden="true"></div>
   <div class="wrap">
-    <h1>Saturday in<br>North&nbsp;Goa,<br><em>in the rain</em></h1>
-    <p class="stand">Nine stops, one loop, back to Baga by midnight. Built for monsoon — forts, Portuguese heritage and food, because the sea is off limits this week.</p>
+    <h1>Four beaches,<br>one fort,<br><em>then midnight</em></h1>
+    <p class="stand">A North Goa coast run from Ashwem down to Baga. Burgers at lunch, Pisco at sunset, Tito's Lane until it stops being fun.</p>
     <div class="facts">
-      <div class="fact"><b>105 km</b><span>total driving</span></div>
-      <div class="fact"><b>9:00</b><span>first stop</span></div>
+      <div class="fact"><b>75 km</b><span>total driving</span></div>
+      <div class="fact"><b>8:30</b><span>first stop</span></div>
       <div class="fact"><b>6:35</b><span>sunset</span></div>
-      <div class="fact"><b>5</b><span>people, one Innova</span></div>
+      <div class="fact"><b>12:00</b><span>call it a night</span></div>
     </div>
   </div>
 </header>
 
 <section class="advisory">
   <div class="wrap">
-    <h2>Before you set off</h2>
-    <p>Water sports are shut. Parasailing, jet ski, banana rides and scuba are all suspended for the monsoon, and lifeguards are restricting entry into the sea. Most beach shacks only reopen in October.</p>
-    <p class="why">Rain today is on and off — roughly a 40% chance, around 30°C. That's fine for this plan: six of the nine stops work wet. Carry one umbrella between two, and wear shoes with grip for the forts.</p>
+    <h2>Read this first</h2>
+    <p>The beaches are for walking, not swimming. Water sports are suspended for the monsoon and lifeguards are restricting entry into the sea. Do not go in, especially after drinking — this is the accident that happens every monsoon.</p>
+    <p class="why">This version is more weather-exposed than the last one. Old Goa and Fontainhas were the rain-proof stops, and they no longer fit around a 12:30 lunch in Anjuna. If it settles into heavy rain, the swap list at the bottom gets you indoors.</p>
   </div>
 </section>
 
 <main>
 <div class="wrap">
   <h2 class="sectionhead">The order</h2>
-  <p class="sectionsub">Go east to Panjim in the middle of the day and come back north for the evening. Don't invert it — you'll lose an hour in Mapusa traffic.</p>
+  <p class="sectionsub">North first while it's cool and empty, then work south down the coast. Everything after lunch sits within ten minutes of Anjuna.</p>
 
-  <!-- 1 -->
-  <article class="stop" data-start="9" data-end="10.5">
-    <span class="dot"></span><span class="time">9:00</span>
+  <article class="stop" data-start="8.4" data-end="9.6">
+    <span class="dot"></span><span class="time">8:30</span>
     <div class="card">
       <p class="kind">Breakfast</p>
       <h3>Cafe Cotinga<span class="hh">Assagao · opens 7:00</span></h3>
-      <p>Opens early, has an air-conditioned room for when it pours, and seats large groups without a booking. Live music most weekend mornings.</p>
+      <p>Early opening, air-conditioned room for when it pours, seats five without a booking.</p>
       <p class="order">Order: butter chicken croissant, eggs Benedict, a cortado.</p>
-      <p>If there's a wait, Hello Sunshine is three minutes away and cheaper.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=7197903172804066680">Open in Maps</a>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Cotinga%20Assagao&amp;query_place_id=ChIJyQxscYfpvzsReL2krswW5GM">Open in Maps</a>
         <span class="pill plain">₹1,800 for five</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">19 km · ~40 min · via Mapusa and Candolim</div>
+  <div class="leg">18 km · ~35 min · north through Siolim and Mandrem</div>
 
-  <!-- 2 -->
-  <article class="stop" data-start="10.5" data-end="12">
-    <span class="dot"></span><span class="time">10:45</span>
+  <article class="stop beach" data-start="9.6" data-end="10.9">
+    <span class="dot"></span><span class="time">9:45</span>
     <div class="card">
-      <p class="kind">Fort</p>
-      <h3>Fort Aguada<span class="hh">Candolim · 9:30–18:00</span></h3>
-      <p>Portuguese sea fort from 1612 with Asia's oldest working lighthouse and the best open sea view in North Goa. The Dil Chahta Hai wall is here.</p>
-      <p class="warn">Ramparts get slippery when wet and there are unwalled drops. Flat shoes, stay off the edge.</p>
+      <p class="kind">Beach 1</p>
+      <h3>Ashwem<span class="hh">Mandrem · widest and cleanest</span></h3>
+      <p>The quietest beach on this list and the one worth the extra driving. Long flat sand, barely any hawkers, mostly a foreign crowd. Empty at this hour in September.</p>
+      <p>Few shacks are open this month, so don't count on food here — you've just eaten anyway.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=11782391001671891740">Open in Maps</a>
-        <span class="pill plain">Free · parking on site</span>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Ashvem%20Beach&amp;query_place_id=ChIJx3JytMXuvzsRl1R6ni18FbY">Open in Maps</a>
+        <span class="pill plain">~1 hr</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">28 km · ~50 min · via the Panjim bypass</div>
+  <div class="leg">5 km · ~15 min · south along the coast road</div>
 
-  <!-- 3 -->
-  <article class="stop" data-start="12" data-end="13.4">
-    <span class="dot"></span><span class="time">12:15</span>
+  <article class="stop beach" data-start="10.9" data-end="12.2">
+    <span class="dot"></span><span class="time">11:00</span>
     <div class="card">
-      <p class="kind">Heritage · fully indoors</p>
-      <h3>Basilica of Bom Jesus<span class="hh">Old Goa · 9:00–17:00</span></h3>
-      <p>UNESCO site holding the relics of St Francis Xavier. Entirely under a roof, so it doesn't matter if it's coming down. Se Cathedral is a three-minute walk across the road, and the art gallery costs ₹10.</p>
-      <p class="warn">Dress code is enforced on everyone. No shorts, shoulders covered — people do get turned away at the door.</p>
+      <p class="kind">Beach 2</p>
+      <h3>Morjim<span class="hh">Chapora river mouth</span></h3>
+      <p>Enormous open stretch where the Chapora meets the sea, and an olive ridley turtle nesting site. Shallow, wide, good for photos with the storm light behind you.</p>
+      <p class="warn">The river-mouth end has strong pull even when it looks flat. Stay on the sand.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=2197851625502386104">Open in Maps</a>
-        <span class="pill plain">Free entry</span>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Morjim%20Beach&amp;query_place_id=ChIJr4aj2XbpvzsR0tYp5LuuRh8">Open in Maps</a>
+        <span class="pill plain">~1 hr</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">10 km · ~20 min · along the Mandovi</div>
+  <div class="leg">14 km · ~35 min · back over the Siolim bridge to Anjuna</div>
 
-  <!-- 4 -->
-  <article class="stop" data-start="13.4" data-end="14.7">
-    <span class="dot"></span><span class="time">13:30</span>
+  <article class="stop" data-start="12.5" data-end="14.2">
+    <span class="dot"></span><span class="time">12:45</span>
     <div class="card">
-      <p class="kind">Lunch · the one you drove east for</p>
-      <h3>Ritz Classic<span class="hh">Panjim · thali served 11:00–16:00 only</span></h3>
-      <p>The Goan fish thali: kingfish rava fry, crab, shellfish, prawn curry, sol kadi and payasam to finish. It is not served at dinner, so this is the slot.</p>
-      <p class="warn">Get there before 2pm or you'll queue. Call ahead for a table for five.</p>
+      <p class="kind">Lunch</p>
+      <h3>Burger Factory<span class="hh">Anjuna · 12:30–22:30 · shut Wednesdays</span></h3>
+      <p>Smashed patties, fresh buns, crispy potato sides thrown in free. Consistently rated the best burger in the state and priced like a normal restaurant, not a beach club.</p>
+      <p class="order">Portions are huge — regulars say one burger comfortably feeds two. Order four between five and add sides.</p>
+      <p class="warn">The turn off the Anjuna–Mapusa road is easy to miss and the approach is tight. Follow the pin, not the signboard.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=8150237685520413698">Open in Maps</a>
-        <a class="pill" href="tel:+918322426417">Call 0832 242 6417</a>
-        <span class="pill plain">₹3,000 for five</span>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Burger%20Factory%20Anjuna&amp;query_place_id=ChIJ_d4ecoHpvzsRjZf7399_wYk">Open in Maps</a>
+        <a class="pill" href="tel:+919075640690">Call 90756 40690</a>
+        <span class="pill plain">₹2,500 for five</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">1.5 km · 5 min drive, or a 15 min walk if you'd rather leave the car</div>
+  <div class="leg">2 km · ~7 min · down to the shore</div>
 
-  <!-- 5 -->
-  <article class="stop" data-start="14.7" data-end="16.2">
-    <span class="dot"></span><span class="time">14:45</span>
+  <article class="stop beach" data-start="14.2" data-end="15.7">
+    <span class="dot"></span><span class="time">14:15</span>
     <div class="card">
-      <p class="kind">Walk</p>
-      <h3>Fontainhas<span class="hh">Panjim · Latin Quarter</span></h3>
-      <p>Portuguese quarter of yellow, blue and green houses, tiled street signs and lanes barely wide enough for a scooter. It looks better wet than dry — the colours saturate.</p>
-      <p class="warn">Park the Innova at the Old Secretariat and walk in. The lanes will not take it. It's a lived-in neighbourhood, several houses now ban photography, so don't shoot into windows.</p>
+      <p class="kind">Beach 3</p>
+      <h3>Anjuna<span class="hh">rocky, dramatic in the rain</span></h3>
+      <p>Black rock outcrops at both ends and heavy monsoon surf breaking over them. Less pretty than Ashwem, far more dramatic right now — this is the one that photographs well when the sky is grey.</p>
+      <p>Walk the southern rocks toward the flea market end, then come back up for a coffee at one of the cliff cafes.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=9897792142643605863">Open in Maps</a>
-        <span class="pill plain">~1 hr on foot</span>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Anjuna%20Beach&amp;query_place_id=ChIJmQGrEY_pvzsRof_MwgLMd9c">Open in Maps</a>
+        <span class="pill plain">~1 hr 15</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">25 km · ~50 min · back north over the Mandovi</div>
+  <div class="leg">5 km · ~15 min · up to the Chapora headland</div>
 
-  <!-- 6 -->
-  <article class="stop" data-start="16.2" data-end="17.8">
-    <span class="dot"></span><span class="time">16:15</span>
+  <article class="stop" data-start="15.7" data-end="16.7">
+    <span class="dot"></span><span class="time">15:45</span>
     <div class="card">
       <p class="kind">Fort · closes 17:00 sharp</p>
       <h3>Chapora Fort<span class="hh">Vagator · 10:00–17:00</span></h3>
-      <p>Ruined hilltop fort with a 360° view over Vagator beach and the Chapora river mouth. Ten to fifteen minutes up from the car park.</p>
-      <p class="warn">Nothing is sold at the top — carry water. Wet laterite is genuinely slick, and the fort empties out fast at five.</p>
+      <p>Ruined hilltop fort with a 360° view over Vagator, the river mouth and everywhere you've just been. Ten to fifteen minutes up from the car park.</p>
+      <p class="warn">Nothing sold at the top, so carry water. Wet laterite is genuinely slick and the drops are unwalled.</p>
       <div class="meta">
         <a class="pill" href="https://maps.google.com/?cid=3966512387993215239">Open in Maps</a>
         <span class="pill plain">Free · park at the base</span>
@@ -290,54 +232,50 @@ footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);f
       </div>
     </div>
   </article>
-  <div class="leg">4 km · ~12 min · down to Ozran</div>
+  <div class="leg">3 km · ~10 min · down the far side of the headland</div>
 
-  <!-- 7 -->
-  <article class="stop" data-start="17.8" data-end="20">
-    <span class="dot"></span><span class="time">18:00</span>
+  <article class="stop beach" data-start="16.7" data-end="18">
+    <span class="dot"></span><span class="time">16:45</span>
     <div class="card">
-      <p class="kind">Sundowner</p>
-      <h3>Thalassa Cliff<span class="hh">Ozran, Vagator · sunset 18:35</span></h3>
-      <p>Cliff-edge terrace over Ozran beach, and the best place to watch the light go on a cloudy evening.</p>
-      <p class="warn">Drinks and the view only. The food is priced well above what it is — you're eating at the next stop. Cocktails run about ₹700.</p>
-      <p>Cliff-side tables fill up. Call and hold one for five.</p>
+      <p class="kind">Beach 4</p>
+      <h3>Ozran<span class="hh">Little Vagator · under the red cliffs</span></h3>
+      <p>Small cove tucked below the Vagator cliffs, with the carved Shiva face in the rock at the water's edge. The steep path down is exactly why it stays empty.</p>
+      <p class="warn">That path is loose rock and gets treacherous wet. Public access is via the steps near Bo Tai — the resorts gate their own entrances.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=6875060408485580983">Open in Maps</a>
-        <a class="pill" href="tel:+918956212256">Call 89562 12256</a>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Ozran%20Beach&amp;query_place_id=ChIJuyzTNnfpvzsRbeKRVdrY7wo">Open in Maps</a>
+        <span class="pill plain">~1 hr</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">7 km · ~20 min · inland to Assagao</div>
+  <div class="leg">6 km · ~18 min · back down the coast to Anjuna</div>
 
-  <!-- 8 -->
-  <article class="stop" data-start="20" data-end="22.2">
-    <span class="dot"></span><span class="time">20:15</span>
+  <article class="stop" data-start="18" data-end="21.7">
+    <span class="dot"></span><span class="time">18:15</span>
     <div class="card">
-      <p class="kind">Dinner</p>
-      <h3>Vinayak<span class="hh">Assagao · dinner 19:00–23:00</span></h3>
-      <p>Where Goans actually go for fish. No view, no vibe, just the best value seafood on this route.</p>
-      <p class="order">Order: prawn masala fry, chonak rawa fry, pomfret, prawn curry with steamed rice. Bebinca and ice cream to close.</p>
-      <p>Has its own car park, which nowhere else tonight does.</p>
+      <p class="kind">Sundowner into dinner · 3 hrs, one table</p>
+      <h3>Pisco<span class="hh">Anjuna · 12:30–00:00 · sunset 18:35</span></h3>
+      <p>Sea-level terrace right on Anjuna beach, and the seating is laid out so nearly every table faces the water. Get there before sunset and just stay — the evening flows straight from drinks into dinner without moving.</p>
+      <p class="order">Order: baby rotisserie chicken, calamari, truffle fat chips, the quesadillas.</p>
+      <p class="warn">It's expensive, and reviewers report a cover charge at the door that isn't explained upfront. Ask what it is when you book, and book — five people at sunset will not walk in.</p>
       <div class="meta">
-        <a class="pill" href="https://maps.google.com/?cid=10670611933577629971">Open in Maps</a>
-        <a class="pill" href="tel:+919049380518">Call 90493 80518</a>
-        <span class="pill plain">₹2,500 for five</span>
+        <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Pisco%20By%20the%20Beach%20Anjuna&amp;query_place_id=ChIJn2XsbvnpvzsRmLK-wQpPOxA">Open in Maps</a>
+        <a class="pill" href="tel:+919665378055">Call 96653 78055</a>
+        <span class="pill plain">₹6,500–7,500 for five</span>
         <button class="pill" aria-pressed="false">Mark done</button>
       </div>
     </div>
   </article>
-  <div class="leg">8 km · ~20 min · to Baga</div>
+  <div class="leg">8 km · ~20 min · to Baga. Cab it, don't drive.</div>
 
-  <!-- 9 -->
-  <article class="stop" data-start="22.2" data-end="26">
-    <span class="dot"></span><span class="time">22:30</span>
+  <article class="stop" data-start="21.7" data-end="24">
+    <span class="dot"></span><span class="time">22:15</span>
     <div class="card">
       <p class="kind">Night</p>
-      <h3>Tito's Lane<span class="hh">Baga · picks up after 23:00</span></h3>
-      <p>Titos, Cafe Mambo and Las Olas are all on the same lane, so you can walk between them and leave when it stops working. Mambo has the better crowd, Las Olas is calmer.</p>
-      <p>Cover charge for men runs roughly ₹1,500–2,000 on a Saturday. Usually free entry for women.</p>
-      <p class="warn">Leave the Innova at your stay and take a cab in. There are breath tests on this stretch and no realistic parking after 11.</p>
+      <h3>Tito's Lane<span class="hh">Baga · peaks after 23:00</span></h3>
+      <p>Titos, Cafe Mambo and Las Olas sit on one short lane, so you can move between them and bail when it stops working. Mambo has the better crowd, Las Olas is calmer and opens onto the beach.</p>
+      <p>Cover for men runs roughly ₹1,500–2,000 on a Saturday. Usually free entry for women.</p>
+      <p class="warn">Leave the Innova at your stay. There are breath tests on this stretch and no parking worth the name after eleven.</p>
       <div class="meta">
         <a class="pill" href="https://maps.google.com/?cid=2620403295419803159">Open in Maps</a>
         <button class="pill" aria-pressed="false">Mark done</button>
@@ -345,6 +283,17 @@ footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);f
     </div>
   </article>
 
+  <article class="stop" data-start="24" data-end="25">
+    <span class="dot"></span><span class="time">00:00</span>
+    <div class="card">
+      <p class="kind">Wrap</p>
+      <h3>Cab home<span class="hh">or keep going — the lane runs to 3am</span></h3>
+      <p>Book the ride before you finish the last drink; surge on this stretch after midnight is steep and the queue outside Titos is long. Confirm the driver has the pin for your stay, not just the area name.</p>
+      <div class="meta">
+        <button class="pill" aria-pressed="false">Mark done</button>
+      </div>
+    </div>
+  </article>
 </div>
 
 <div class="wrap">
@@ -352,32 +301,33 @@ footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);f
     <div>
       <h2>Roughly what it costs</h2>
       <table class="money">
-        <tr><td>Food, three meals</td><td>₹1,460 each</td></tr>
-        <tr><td>Fuel, ~105 km</td><td>₹220 each</td></tr>
-        <tr><td>Parking and entries</td><td>₹100 each</td></tr>
-        <tr><td>Sundowner drinks</td><td>₹700–1,000 each</td></tr>
+        <tr><td>Breakfast</td><td>₹360 each</td></tr>
+        <tr><td>Burger Factory</td><td>₹500 each</td></tr>
+        <tr><td>Pisco, food and drinks</td><td>₹1,400 each</td></tr>
+        <tr><td>Fuel, ~75 km</td><td>₹160 each</td></tr>
+        <tr><td>Parking, cabs</td><td>₹250 each</td></tr>
         <tr><td>Tito's cover, men</td><td>₹1,500–2,000</td></tr>
-        <tr><td>Per person, all in</td><td>₹4,000–5,000</td></tr>
+        <tr><td>Per person, all in</td><td>₹2,700–4,700</td></tr>
       </table>
     </div>
     <div>
       <h2>Driving notes</h2>
       <ul>
-        <li><b>Fontainhas</b> — the Innova does not fit. Old Secretariat car park, then walk.</li>
-        <li><b>Chapora</b> — park at the base of the hill, not the village lanes.</li>
-        <li><b>Old Goa</b> — large free lot, easiest parking of the day.</li>
-        <li><b>Baga at night</b> — don't attempt it. Cab in, cab out.</li>
-        <li><b>Rain</b> — Goa's inner roads flood in patches and potholes disappear under water. Keep it slow on the Assagao and Anjuna stretches after dark.</li>
+        <li><b>Siolim bridge</b> is the only crossing between Morjim and Anjuna. Don't let Maps talk you into the ferry in monsoon.</li>
+        <li><b>Ashwem and Morjim</b> have easy roadside parking. Anjuna and Ozran do not — go early or park up on the road and walk down.</li>
+        <li><b>Chapora</b> — park at the base of the hill, not in the village lanes.</li>
+        <li><b>Baga at night</b> — cab in, cab out. Don't attempt it in the Innova.</li>
+        <li><b>Rain</b> — the Anjuna and Assagao inner roads flood in patches and potholes vanish under water. Slow after dark.</li>
       </ul>
     </div>
   </div>
 
   <div class="block">
-    <h2>If you want a different day</h2>
+    <h2>If the weather turns</h2>
     <ul>
-      <li><b>Chase the waterfall instead.</b> Drop Old Goa and Panjim, drive an hour east to Dudhsagar. It's at full flow right now and monsoon is the only time it looks like that. Jeep safaris shut in heavy rain, so call before you commit to the drive.</li>
-      <li><b>Stay dry all day.</b> Reis Magos Fort, the Goa State Museum, Old Goa's churches, then a Mandovi river cruise in the evening. Nothing on that list needs the weather to cooperate.</li>
-      <li><b>Go south.</b> Quieter, greener and emptier in monsoon — Colva, Cabo de Rama, Palolem, Chandor's Portuguese mansions. Less nightlife, more driving.</li>
+      <li><b>Swap the two northern beaches for Old Goa.</b> Basilica of Bom Jesus and Se Cathedral are fully indoors and open 9–5. Adds about 90 minutes of driving but nothing on the list gets rained off.</li>
+      <li><b>Swap Ozran for Fontainhas.</b> The Portuguese quarter in Panjim looks better wet than dry. Park at the Old Secretariat — the lanes won't take the Innova.</li>
+      <li><b>Drop the coast entirely.</b> Dudhsagar is at full flow right now and monsoon is the only time it looks like that. Jeep safaris shut in heavy rain, so call before committing to the drive.</li>
     </ul>
   </div>
 </div>
@@ -385,15 +335,13 @@ footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);f
 
 <footer>
   <div class="wrap">
-    Timings are targets, not a schedule. Opening hours and prices shift, so call the restaurants before you drive to them. Sunset is 18:35 today.
+    Times are targets, not a schedule. Book Pisco and check Burger Factory is open before you drive out. Sunset is 18:35.
   </div>
 </footer>
 
 <script>
 (function(){
   var stops = Array.prototype.slice.call(document.querySelectorAll('.stop'));
-
-  // Mark-done toggle, in memory for this session.
   stops.forEach(function(stop){
     var btn = stop.querySelector('button.pill');
     if(!btn) return;
@@ -404,11 +352,10 @@ footer{border-top:1px solid var(--rule);padding:26px 0 56px;color:var(--muted);f
       stop.classList.toggle('done', !on);
     });
   });
-
-  // Highlight whichever stop you should be at right now.
   function markNow(){
     var d = new Date();
     var h = d.getHours() + d.getMinutes()/60;
+    if (h < 4) h += 24;               // after midnight still counts as tonight
     stops.forEach(function(stop){
       var s = parseFloat(stop.dataset.start), e = parseFloat(stop.dataset.end);
       stop.classList.toggle('now', h >= s && h < e);
